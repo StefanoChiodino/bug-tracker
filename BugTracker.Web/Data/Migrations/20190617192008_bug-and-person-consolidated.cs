@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace BugTracker.Web.Data.Migrations
 {
-    public partial class InitialCreate : Migration
+    public partial class bugandpersonconsolidated : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -27,7 +27,7 @@ namespace BugTracker.Web.Data.Migrations
                 {
                     BugId = table.Column<int>(nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
-                    Created = table.Column<DateTime>(nullable: false),
+                    CreatedUtc = table.Column<DateTime>(nullable: false),
                     Title = table.Column<string>(nullable: false),
                     Description = table.Column<string>(nullable: true),
                     AssigneePersonId = table.Column<int>(nullable: true),

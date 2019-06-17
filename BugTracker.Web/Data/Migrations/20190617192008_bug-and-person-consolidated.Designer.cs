@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BugTracker.Web.Data.Migrations
 {
     [DbContext(typeof(BugTrackerDbContext))]
-    [Migration("20190617190935_specify-date-timezone")]
-    partial class specifydatetimezone
+    [Migration("20190617192008_bug-and-person-consolidated")]
+    partial class bugandpersonconsolidated
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
