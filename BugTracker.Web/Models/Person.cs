@@ -2,6 +2,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace BugTracker.Web.Models
 {
+    // TODO: consider if could be part of Identity framework.
     public class Person
     {
         [Key]

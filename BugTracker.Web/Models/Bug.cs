@@ -14,6 +14,7 @@ namespace BugTracker.Web.Models
         
         // TODO: store user TimeZone and apply to this.
         [Required]
+        [DisplayName("Created UTC")]
         public DateTime CreatedUtc { get; set; } = DateTime.UtcNow;
         
         [Required]
