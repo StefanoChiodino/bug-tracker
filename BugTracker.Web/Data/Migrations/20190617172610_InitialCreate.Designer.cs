@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
-namespace WebApplication1.Data.Migrations
+namespace BugTracker.Web.Data.Migrations
 {
     [DbContext(typeof(BugTrackerDbContext))]
     [Migration("20190617172610_InitialCreate")]

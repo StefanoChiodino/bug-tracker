@@ -7,7 +7,7 @@
 using System;
 using System.Reflection;
 
-[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("aspnet-WebApplication1-C15D2AF8-16E7-4D3B-8F52-28116E2547AF")]
+[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("aspnet-BugTracker.Web-C15D2AF8-16E7-4D3B-8F52-28116E2547AF")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("BugTracker.Web")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]

@@ -2,9 +2,8 @@
 
     <PropertyGroup>
         <TargetFramework>netcoreapp2.2</TargetFramework>
-        <UserSecretsId>aspnet-WebApplication1-C15D2AF8-16E7-4D3B-8F52-28116E2547AF</UserSecretsId>
+        <UserSecretsId>aspnet-BugTracker.Web-C15D2AF8-16E7-4D3B-8F52-28116E2547AF</UserSecretsId>
         <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
-        <RootNamespace>WebApplication1</RootNamespace>
     </PropertyGroup>
 
 

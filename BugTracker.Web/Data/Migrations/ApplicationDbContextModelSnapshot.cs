@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
-namespace WebApplication1.Data.Migrations
+namespace BugTracker.Web.Data.Migrations
 {
     [DbContext(typeof(BugTrackerDbContext))]
     partial class ApplicationDbContextModelSnapshot : ModelSnapshot

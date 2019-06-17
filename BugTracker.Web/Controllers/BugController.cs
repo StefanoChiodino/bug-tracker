@@ -51,9 +51,10 @@ namespace BugTracker.Web.Controllers
         // POST: Bug/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
+        // Created date will not be bound because it needs to default to UTC Now.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("BugId,Created,Title,Description,IsClosed")] Bug bug)
+        public async Task<IActionResult> Create([Bind("BugId,Title,Description,IsClosed")] Bug bug)
         {
             if (ModelState.IsValid)
             {

@@ -2,13 +2,13 @@
 
 using System;
 using BugTracker.Web.Models;
-using WebApplication1.Data;
+using BugTracker.Web.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
-namespace WebApplication1.Data.Migrations
+namespace BugTracker.Web.Data.Migrations
 {
     [DbContext(typeof(BugTrackerDbContext))]
     [Migration("00000000000000_CreateIdentitySchema")]
