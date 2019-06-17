@@ -21,7 +21,28 @@ namespace BugTracker.Web.Controllers
         // GET: Bug
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Bugs.ToListAsync());
+            // TODO: probably bad karma, don't share this view or handle without using ViewData.
+            ViewData["Title"] = "Open Bugs";
+            
+            var openBugs = await _context.Bugs
+                // I recently started to prefer using `== false` to ! because it's more obvious
+                .Where(bug => bug.IsClosed == false)
+                .ToListAsync();
+            
+            return View(openBugs);
+        }
+
+        public async Task<IActionResult> Closed()
+        {
+            // TODO: probably bad karma, don't share this view or handle without using ViewData.
+            ViewData["Title"] = "Closed Bugs";
+
+            var closedBugs = await _context.Bugs
+                // I recently started to prefer using `== false` to ! because it's more obvious
+                .Where(bug => bug.IsClosed)
+                .ToListAsync();
+            
+            return View("Index", closedBugs);
         }
 
         // GET: Bug/Details/5
