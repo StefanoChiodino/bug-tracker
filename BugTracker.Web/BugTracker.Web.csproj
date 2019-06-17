@@ -8,7 +8,7 @@
 
 
     <ItemGroup>
-        <None Update="BugTracker.db" CopyToOutputDirectory="PreserveNewest" />
+        <None Update="BugTracker.db.bak" CopyToOutputDirectory="PreserveNewest" />
     </ItemGroup>
 
     <ItemGroup>

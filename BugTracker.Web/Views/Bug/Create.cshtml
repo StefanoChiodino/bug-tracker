@@ -1,4 +1,4 @@
-@model BugTracker.Web.Models.Bug
+@model BugCreateViewModel
 
 @{
     ViewData["Title"] = "Create";
@@ -22,10 +22,10 @@
                 <input asp-for="Description" class="form-control" />
                 <span asp-validation-for="Description" class="text-danger"></span>
             </div>
-            <div class="form-group form-check">
-                <label class="form-check-label">
-                    <input class="form-check-input" asp-for="IsClosed" /> @Html.DisplayNameFor(model => model.IsClosed)
-                </label>
+            <div class="form-group">
+                <label asp-for="Assignee" class="control-label"></label>
+                <select asp-for="Description" class="form-control" asp-items="Model.PeopleSelectListItems"></select>
+                <span asp-validation-for="Assignee" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />

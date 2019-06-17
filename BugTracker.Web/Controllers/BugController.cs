@@ -45,7 +45,18 @@ namespace BugTracker.Web.Controllers
         // GET: Bug/Create
         public IActionResult Create()
         {
-            return View();
+            var peopleSelectListItems = _context.People
+                .Select(person => new SelectListItem($"{person.Name} {person.Surname}", person.PersonId.ToString()))
+                .ToList();
+
+            var model = new BugCreateViewModel();
+            model.PeopleSelectListItems = peopleSelectListItems;
+            
+            // Add default empty option
+            model.PeopleSelectListItems.Insert(0, new SelectListItem("", null));
+
+            // TODO: refactor this to view model.
+            return View(model);
         }
 
         // POST: Bug/Create

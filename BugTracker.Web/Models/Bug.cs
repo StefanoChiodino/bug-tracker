@@ -1,6 +1,8 @@
 using System;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace BugTracker.Web.Models
 {
@@ -31,5 +33,10 @@ namespace BugTracker.Web.Models
         
         // TODO: record who reported the bug.
         // public virtual IdentityUser Reporter { get; set; }
+    }
+
+    public class BugCreateViewModel : Bug
+    {
+        public IList<SelectListItem> PeopleSelectListItems { get; set; }
     }
 }
