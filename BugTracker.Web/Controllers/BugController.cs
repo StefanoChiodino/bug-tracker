@@ -66,6 +66,7 @@ namespace BugTracker.Web.Controllers
         // GET: Bug/Create
         public IActionResult Create()
         {
+            // TODO: if none found show warning on UI explaining how to add any.
             var peopleSelectListItems = _context.People
                 .Select(person => new SelectListItem($"{person.Name} {person.Surname}", person.PersonId.ToString()))
                 .ToList();
@@ -86,15 +87,15 @@ namespace BugTracker.Web.Controllers
         // Created date will not be bound because it needs to default to UTC Now.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("BugId,Title,Description,IsClosed")] Bug bug)
+        public async Task<IActionResult> Create([Bind("BugId,Title,Description,IsClosed")] BugCreateViewModel model)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(bug);
+                _context.Add(model);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return View(bug);
+            return View(model);
         }
 
         // GET: Bug/Edit/5
