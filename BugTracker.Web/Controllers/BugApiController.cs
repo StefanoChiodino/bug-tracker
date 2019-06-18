@@ -20,7 +20,7 @@ namespace BugTracker.Web.Controllers
             _context = context;
         }
 
-        // GET: Bug
+        [HttpGet]
         public async Task<IActionResult> Index()
         {
             // TODO: probably bad karma, don't share this view or handle without using ViewData.
@@ -34,6 +34,7 @@ namespace BugTracker.Web.Controllers
             return Json(openBugs);
         }
 
+        [HttpGet]
         public async Task<IActionResult> Closed()
         {
             // TODO: probably bad karma, don't share this view or handle without using ViewData.
@@ -47,7 +48,7 @@ namespace BugTracker.Web.Controllers
             return Json(closedBugs);
         }
 
-        // GET: Bug/Details/5
+        [HttpGet]
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
